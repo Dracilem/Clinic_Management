@@ -17,7 +17,7 @@ public class PatientDao {
 		Connection con = null;
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			con = DriverManager.getConnection("jdbc:mysql://localhost/assignment2", "root", "...iuryl0jason");
+			con = DriverManager.getConnection("jdbc:mysql://localhost/assignment2", "root", "zxxhh");
 		}catch (Exception e) {
 			System.out.println(e);
 		}	

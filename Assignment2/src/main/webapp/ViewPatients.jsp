@@ -6,6 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
 <body>
 <%@page import="com.dao.PatientDao, com.dao.bean.Patient, java.util.*" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -16,7 +17,7 @@ List<Patient>list = PatientDao.getAllPatients();
 request.setAttribute("list", list);
 %>
 <form action="SearchPatient.jsp" method="post">
-	<input type="search" name="IC" placeholder="Input Patient IC"/>
+	<input type="search" name="iC" id="test" placeholder="Input Patient IC"/>
 	<input type="submit" value="Search"/>
 	<a  href="ViewPatients.jsp">
 	<input type=button value="View All">
@@ -53,7 +54,7 @@ request.setAttribute("list", list);
 		<td>${p.getNumber()}</td>
 		<td>${p.getBirthday()}</td>
 		<td>${p.getPrescriptions()}</td>
-		<td><a href="Questionnaires.jsp?pid=${p.getPid()}">Click here</a>
+		<td><a href="ShowQuestionnaire.jsp?iC=${p.getIC()}">Click here</a>
 		</td>
 		<td><a type="button" href="EditPatientsForm.jsp?pid=${p.getPid()}"><input type=button value="Edit"></a>
 		

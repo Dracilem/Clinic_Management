@@ -42,7 +42,12 @@ Patient p = PatientDao.getPatientByPatientId(Integer.parseInt(pid));
 		</tr>
 		<tr>
 			<td>Date:</td>
-			<td><input type="date" name="date" value="<%=p.getDate()%>" id="date"></td>
+			<td>		
+			<select name="date" style="width:200px">
+				<option><%=p.getDate()%></option>
+				<option><%=new java.sql.Date(System.currentTimeMillis())%></option>
+			</select>
+			</td>
 		</tr>
 		<tr>
 			<td>Prescriptions:</td>

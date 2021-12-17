@@ -17,6 +17,7 @@ if(user == null){
 	response.sendRedirect("Login-Null.jsp");
 }
 else if(user.getUsername().equals(u.getUsername()) && user.getPassword().equals(u.getPassword())){
+	
 	response.sendRedirect("ViewPatients.jsp");
 }else{
 	response.sendRedirect("Login-Error.jsp");

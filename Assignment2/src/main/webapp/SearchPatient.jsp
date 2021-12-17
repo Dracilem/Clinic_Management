@@ -9,17 +9,16 @@
 <body>
 <%@page import="com.dao.PatientDao, com.dao.bean.Patient, java.util.*" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%
-String IC = request.getParameter("IC");
+String IC = (String)request.getParameter("iC");
+out.println(IC);
 Patient p = PatientDao.getPatientByIC(IC);
-if(p.getPname()==null)
-{
-	response.sendRedirect("searchPatient-failed.jsp");
-}
 %>
+
 <h1 align="center">Clinic Management System</h1>
 <form action="SearchPatient.jsp" method="post">
-	<input type="search" name="IC" value="<%=request.getParameter("IC")%>"/>
+	<input type="search" name="iC" value="<%=p.getIC()%>"/>
 	<input type="submit" value="Search"/>
 		<a  href="ViewPatients.jsp">
 	<input type=button value="View All">
