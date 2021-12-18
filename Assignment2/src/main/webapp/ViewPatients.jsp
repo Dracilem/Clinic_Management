@@ -54,7 +54,7 @@ request.setAttribute("list", list);
 		<td>${p.getNumber()}</td>
 		<td>${p.getBirthday()}</td>
 		<td>${p.getPrescriptions()}</td>
-		<td><a href="ShowQuestionnaire.jsp?iC=${p.getIC()}">Click here</a>
+		<td><a href="CheckTest.jsp?pid=${p.getPid()}&iC=${p.getIC()}">Click here</a>
 		</td>
 		<td><a type="button" href="EditPatientsForm.jsp?pid=${p.getPid()}"><input type=button value="Edit"></a>
 		

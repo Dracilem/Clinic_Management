@@ -21,7 +21,7 @@ public class TestInfoDao {
 		return con;
 	}
 	
-	public static int save(TestInfo t)
+	public static int save(TestInfo t, String s)
 	{
 		int status = 0;
 		try {
@@ -32,7 +32,7 @@ public class TestInfoDao {
 			pst.setString(3, t.getPhone());
 			pst.setString(4, t.getTestType());
 			pst.setString(5, t.getVaccinationInfo());
-			pst.setString(6, t.getSymptoms());
+			pst.setString(6, s);
 			pst.setString(7, t.getAttendCluster());
 			pst.setString(8, t.getContactPositive());
 			
@@ -44,19 +44,19 @@ public class TestInfoDao {
 		return status;
 	}
 	
-	public static int update(TestInfo t)
+	public static int update(TestInfo t, String s)
 	{
 		int status = 0;
 		try {
 			Connection con = getConnection();
-			PreparedStatement pst = con.prepareStatement("update covidinfo set TestType=?,\r\n"
-					+ "	VaccinationInfo=?,symptoms=?,AttendCluster=?,ContactPositive=? where IC=?");
+			PreparedStatement pst = con.prepareStatement("update covidinfo set IC=?,pname=?,phone=?, TestType=?,\r\n"
+					+ "	VaccinationInfo=?,symptoms=?,AttendCluster=?,ContactPositive=?");
 			pst.setString(1, t.getIC());
 			pst.setString(2, t.getPname());
 			pst.setString(3, t.getPhone());
 			pst.setString(4, t.getTestType());
 			pst.setString(5, t.getVaccinationInfo());
-			pst.setString(6, t.getSymptoms());
+			pst.setString(6, s);
 			pst.setString(7, t.getAttendCluster());
 			pst.setString(8, t.getContactPositive());
 			

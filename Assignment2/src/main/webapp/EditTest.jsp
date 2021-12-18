@@ -15,10 +15,10 @@
 String[] symptomlist;
 symptomlist =request.getParameterValues("symptoms");
 String s=Arrays.toString(symptomlist).replace("[","").replace("]","");
-int i=TestInfoDao.save(t,s);
+int i=TestInfoDao.update(t,s);
 
 if(i>0){
-	out.println("A test form is created.");
+	out.println("A test form is edited.");
 	response.sendRedirect("ViewPatients.jsp");
 }else{
 	response.sendRedirect("ViewPatients.jsp");
