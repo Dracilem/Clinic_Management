@@ -49,16 +49,16 @@ public class TestInfoDao {
 		int status = 0;
 		try {
 			Connection con = getConnection();
-			PreparedStatement pst = con.prepareStatement("update covidinfo set IC=?,pname=?,phone=?, TestType=?,\r\n"
-					+ "	VaccinationInfo=?,symptoms=?,AttendCluster=?,ContactPositive=?");
-			pst.setString(1, t.getIC());
-			pst.setString(2, t.getPname());
-			pst.setString(3, t.getPhone());
-			pst.setString(4, t.getTestType());
-			pst.setString(5, t.getVaccinationInfo());
-			pst.setString(6, s);
-			pst.setString(7, t.getAttendCluster());
-			pst.setString(8, t.getContactPositive());
+			PreparedStatement pst = con.prepareStatement("update covidinfo set pname=?,phone=?, TestType=?,\r\n"
+					+ "	VaccinationInfo=?,symptoms=?,AttendCluster=?,ContactPositive=? where IC=?");
+			pst.setString(1, t.getPname());
+			pst.setString(2, t.getPhone());
+			pst.setString(3, t.getTestType());
+			pst.setString(4, t.getVaccinationInfo());
+			pst.setString(5, s);
+			pst.setString(6, t.getAttendCluster());
+			pst.setString(7, t.getContactPositive());
+			pst.setString(8, t.getIC());
 			
 			
 			status = pst.executeUpdate();
