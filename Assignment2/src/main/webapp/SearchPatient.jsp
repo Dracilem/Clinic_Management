@@ -46,7 +46,7 @@ Patient p = PatientDao.getPatientByIC(IC);
 
 	</tr>
 	<tr>
-		<td>${p.getPid()}</td>
+		<td><%=p.getPid()%></td>
 		<td>${p.getIC()}</td>
 		<td>${p.getGender()}</td>
 		<td>${p.getDate()}</td>
