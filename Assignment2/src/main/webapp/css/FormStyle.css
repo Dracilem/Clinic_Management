@@ -1,0 +1,79 @@
+@charset "UTF-8";
+
+.Content-Main {
+	width: 600px;
+	margin: auto;
+	border: none;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font: 14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	text-shadow: 1px 1px 1px #444;
+	color: #D3D3D3;
+	background: #555;
+	background-image: url('images/Background3.jpg');
+	margin-top:40px;
+}
+
+.Content-Main h1 {
+	padding: 8px 0px 40px 10px;
+	display: block;
+	border-bottom: 1px solid #444;
+	text-align:center;
+}
+
+.Content-Main label {
+	margin: 0px 0px 5px;
+	display: block;
+}
+
+.Content-Main label>span {
+	width: 20%;
+	float: left;
+	text-align: right;
+	padding-right: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+}
+
+
+
+.Content-Main input[type="text"], .Content-Main input[type="password"], .Content-Main input[type="date"]{
+	height: 25px;
+	width: 70%;
+	line-height: 15px;
+	padding: 5px 0px 5px 5px;
+	margin-bottom: 16px;
+	margin-right: 6px;
+	margin-top: 2px;
+	border: none;
+	border-radius: 2px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	outline: 0 none;
+	background: #DFDFDF;
+	color: #525252;
+}
+
+
+.Content-Main .button {
+	padding: 8px 24px 8px 24px;
+	margin-bottom: 8px;
+	border: none;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #FFE477;
+	box-shadow: 1px 1px 1px #3D3D3D;
+	-moz-box-shadow: 1px 1px 1px #3D3D3D;
+	-webkit-box-shadow: 1px 1px 1px #3D3D3D;
+	color: #585858;
+	background: #f6ff0a;
+ 	text-align:center;
+}
+
+.Content-Main .button:hover {
+	color: #333;
+	background-color: #EBEBEB;
+}
